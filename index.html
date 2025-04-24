@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Untuk Rinn</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: url('https://files.catbox.moe/lvh7ip.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 5px black;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 90%;
+      transform: scale(0.8);
+      opacity: 0;
+      position: absolute;
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+      animation: zoomIn 0.5s ease forwards;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #ff66a5;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: #ff3f90;
+    }
+
+    @keyframes zoomIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes zoomOut {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+    }
+
+    /* Animasi Kupu-Kupu */
+    .butterfly {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url('https://i.pinimg.com/originals/7f/0d/5a/7f0d5a287cc8f524d0f708addc4be8f7.gif');
+      background-size: cover;
+      animation: fly 8s infinite ease-in-out;
+      z-index: 10;
+    }
+
+    .butterfly:nth-child(1) {
+      animation-duration: 8s;
+      animation-delay: 0s;
+    }
+
+    .butterfly:nth-child(2) {
+      animation-duration: 9s;
+      animation-delay: 2s;
+    }
+
+    .butterfly:nth-child(3) {
+      animation-duration: 7s;
+      animation-delay: 4s;
+    }
+
+    @keyframes fly {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      25% {
+        transform: translate(300px, 100px) rotate(45deg);
+      }
+      50% {
+        transform: translate(0, 200px) rotate(90deg);
+      }
+      75% {
+        transform: translate(-300px, 100px) rotate(135deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(180deg);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Halaman 1 -->
+    <div class="page active" id="page1">
+      <h1>Hai, Rinn</h1>
+      <p>Website ini cuma buat kamu. Karena kamu istimewa.</p>
+      <button class="btn" onclick="nextPage(2)">klik disini ya cantik</button>
+    </div>
+
+    <!-- Halaman 2 -->
+    <div class="page" id="page2">
+      <h1>Untuk Kamu</h1>
+      <p>Rinn, meskipun kita belum pernah bertemu secara langsung, aku merasa bahwa ada ikatan yang kuat di antara kita. Setiap pesan yang kita tukar, setiap percakapan yang terjadi, membuat aku semakin yakin bahwa kita ada untuk saling mendukung.</p>
+      <button class="btn" onclick="nextPage(3)">Lanjutkan...</button>
+    </div>
+
+    <!-- Halaman 3 -->
+    <div class="page" id="page3">
+      <h1>Untuk Kamu</h1>
+      <p>Setiap hari aku selalu mikirin kamu, Rinn. Ketika kita ngobrol, aku bisa merasakan kebahagiaan dan kedamaian. Terkadang, aku merasa seperti ada yang hilang, tapi setelah aku ngobrol dengan kamu, semuanya terasa lengkap.</p>
+      <button class="btn" onclick="nextPage(4)">Lanjutkan...</button>
+    </div>
+
+    <!-- Halaman 4 -->
+    <div class="page" id="page4">
+      <h1>Untuk Kamu</h1>
+      <p>Jadi, aku cuma mau kamu tahu, aku tetap sayang kamu. Walau jarak memisahkan kita, tapi hatiku selalu dekat dengan kamu. Aku berharap kita bisa terus berbicara, berbagi cerita, dan tetap menjaga hubungan ini.</p>
+      <button class="btn" onclick="nextPage(5)">Lanjutkan...</button>
+    </div>
+
+    <!-- Halaman 5 -->
+    <div class="page" id="page5">
+      <h1>Untuk Kamu</h1>
+      <p>Aku tahu waktu akan membawa kita ke arah yang lebih baik, dan aku akan menunggu hingga saat itu datang. Rinn, kamu sangat berarti dalam hidupku dan aku gak sabar menantikan waktu di mana kita bisa saling bertemu.</p>
+      <button class="btn" onclick="nextPage(6)">Lanjutkan...</button>
+    </div>
+
+    <!-- Halaman 6 -->
+    <div class="page" id="page6">
+      <h1>Untuk Kamu</h1>
+      <p>Aku tetap sayang kamu, Rinn, lebih dari apa yang bisa aku ungkapkan dengan kata-kata. Semoga semua yang terbaik selalu menyertai kita berdua.</p>
+      <button class="btn" onclick="nextPage(7)">Lanjutkan...</button>
+    </div>
+
+    <!-- Halaman 7 - Kupu-Kupu Terbang -->
+    <div class="page" id="page7">
+      <div class="butterfly"></div>
+      <div class="butterfly"></div>
+      <div class="butterfly"></div>
+      <h1>Sampe sini aja yaa, byee</h1>
+      <p>From Alexx, for my Love "Rinn"
+      Maaf ya kalo kurang bagus</p>
+      <button class="btn" onclick="nextPage(1)">Kembali ke Halaman Utama</button>
+    </div>
+  </div>
+
+  <script>
+    let currentPage = 1;
+
+    function nextPage(pageNumber) {
+      document.getElementById(`page${currentPage}`).classList.remove("active");
+      document.getElementById(`page${currentPage}`).classList.add("zoomOut");
+
+      setTimeout(() => {
+        document.getElementById(`page${currentPage}`).classList.remove("zoomOut");
+        currentPage = pageNumber;
+        document.getElementById(`page${currentPage}`).classList.add("active");
+      }, 500);
+    }
+  </script>
+</body>
+</html>
